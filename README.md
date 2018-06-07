@@ -1,2 +1,6 @@
 # github-releasehistory
-Create a release history file from the releases of a GitHub project
+Create a release log from the releases of a GitHub project
+
+# Usage
+
+     ./releasehistory.py --owner britzl --repo monarch
