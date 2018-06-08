@@ -20,9 +20,10 @@ if response.status_code != 200:
 for release in response.json():
     name = release["name"]
     body = release["body"]
+    body = release["body"].replace("\r\n", "  \r\n")
     published_at = release["published_at"]
     prerelease = release["prerelease"]
     author = release["author"]["login"]
     datetime_object = datetime.strptime(published_at, '%Y-%m-%dT%H:%M:%SZ')
 
-    print("%s [%s released %d-%02d-%02d]\n%s\n" % (name, author, datetime_object.year, datetime_object.month, datetime_object.day, body))
+    print("## %s [%s released %d-%02d-%02d]\n%s\n" % (name, author, datetime_object.year, datetime_object.month, datetime_object.day, body))
