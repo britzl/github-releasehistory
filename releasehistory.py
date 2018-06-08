@@ -19,7 +19,6 @@ if response.status_code != 200:
 
 for release in response.json():
     name = release["name"]
-    body = release["body"]
     body = release["body"].replace("\r\n", "  \r\n")
     published_at = release["published_at"]
     prerelease = release["prerelease"]
