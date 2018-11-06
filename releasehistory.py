@@ -98,6 +98,6 @@ with open(file, "w") as out:
                 release_date = datetime.strptime(published_at, '%Y-%m-%dT%H:%M:%SZ')
                 if release_date >= max_releaseage:
                     out.write("## %s [%s released %d-%02d-%02d]\n%s\n\n" % (name, author, release_date.year, release_date.month, release_date.day, body))
-            out.write("\n\n")
+            out.write("\n")
         else:
             log(" - no releases found\n")
