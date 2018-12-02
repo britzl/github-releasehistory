@@ -1,0 +1,117 @@
+# [aws-sdk-lua](https://github.com/britzl/aws-sdk-lua)
+Auto generated AWS SDK for Lua
+
+## AWS SDK 1.0.0 [britzl released 2018-11-05]
+CHANGE: Code generated updated to deal with documentation strings containing linebreaks  
+CHANGE: Filenames for generated code more closely resembles the filenames for other AWS SDK languages  
+CHANGE: Updated to latest API versions
+
+
+# [cucumber-defold](https://github.com/britzl/cucumber-defold)
+Cucumber for the Defold game engine
+
+## Cucumber-Defold 1.0.1 [britzl released 2018-10-26]
+FIX: Send line number and source in step match (currently sending unknown:0 since that is the default value in cucumber-ruby-wire)
+
+
+# [defold-googleanalytics](https://github.com/britzl/defold-googleanalytics)
+Google Analytics implementation for the Defold game engine
+
+## Defold Google Analytics 1.4.0 [britzl released 2018-09-25]
+NEW: Added optional soft and hard crash callbacks to `tracker.enable_crash_reporting(enabled, on_soft_crash, on_hard_crash)`
+
+
+# [defold-input](https://github.com/britzl/defold-input)
+Simplify input related operations such as gesture detection, input mapping and clicking/dragging game objects
+
+## Defold-Input 1.5.1 [britzl released 2018-11-20]
+NEW: button.lua will assign an auto-generated node id if the node doesn't have an id (empty hash). This is typically encountered in cloned nodes.
+
+## Defold-Input 1.5.0 [britzl released 2018-11-15]
+FIX: Unregistering nodes using a string didn't work  
+CHANGE: Button clicks are now required to have both pressed and released inside the button to be treated as a click
+
+## Defold-Input 1.4.1 [britzl released 2018-11-14]
+FIX: Unregistering a button didn't work. Thanks @Jerakin
+
+## Defold-Input 1.4.0 [britzl released 2018-10-25]
+NEW: Accelerometer support  
+CHANGE: Game objects are no longer centered on the cursor when dragged. Instead their offset now remains.
+
+
+# [defold-luasec](https://github.com/britzl/defold-luasec)
+LuaSec module for Defold
+
+## Defold-LuaSec 1.0.1 [britzl released 2018-10-05]
+FIX: Incorrect naming of libs and includes on Windows. Thanks @jcash!
+
+
+# [defold-orthographic](https://github.com/britzl/defold-orthographic)
+Orthographic camera functionality for the Defold game engine
+
+## Orthographic Camera API 2.6.0 [britzl released 2018-10-15]
+NEW: Added render helper for easier integration in render scripts
+
+
+# [defold-richtext](https://github.com/britzl/defold-richtext)
+Defold-RichText is a system to create styled text based on an HTML inspired markup language
+
+## Defold RichText 5.3.0 [britzl released 2018-11-29]
+NEW: UTF8 support. Thanks Dmitriy!
+
+## Defold RichText 5.2.0 [britzl released 2018-09-12]
+NEW: Added support for the `a` anchor tab to easily handle clickable words  
+FIX: Generated nodes are assigned unique ids
+
+
+# [deftest](https://github.com/britzl/deftest)
+Unit testing in Defold
+
+## DefTest 2.6.0 [britzl released 2018-11-20]
+NEW: Mock of gui.clone()
+
+## DefTest 2.5.0 [britzl released 2018-11-15]
+NEW: Added support for gui.animate() and gui.cancel_animation()  
+FIX: Error when not providing a code coverage configuration
+
+
+# [emthree](https://github.com/britzl/emthree)
+Match 3 engine for Defold
+
+## Emthree 1.1.0 [britzl released 2018-10-28]
+NEW: Support for different slide directions when collapsing the board
+
+## Emthree 1.0.1 [britzl released 2018-10-25]
+FIX: Take into account world position and scale when converting screen coordinates  
+CHANGE: Use of timer module for internal delays instead of go.animate()
+
+
+# [gooey](https://github.com/britzl/gooey)
+Defold GUI system
+
+## Gooey 6.5.1 [britzl released 2018-09-26]
+FIX: Adding and removing items from a dynamic list didn't work properly
+
+
+# [ludobits](https://github.com/britzl/ludobits)
+Utilities for game development using the Defold engine
+
+## Ludobits 6.2.0 [britzl released 2018-11-03]
+NEW: util.lerp()
+
+
+# [platypus](https://github.com/britzl/platypus)
+Defold platformer engine
+
+## Platypus 3.1.0 [britzl released 2018-11-15]
+NEW: Collision configuration option `config.collision.ground` has been deprecated in favour of `config.collision.groups` (see documentation for details). This opens up for configuration of one-way platforms and doors.  
+NEW: The id of the game object that the instance is parented to is exposed as `parent_id`
+
+
+# [steamworks-defold](https://github.com/britzl/steamworks-defold)
+Steamworks support for Defold using the Defold extension system
+
+## Steamworks 1.0.0 [britzl released 2018-09-17]
+First public release
+
+

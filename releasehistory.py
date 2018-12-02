@@ -24,6 +24,15 @@ def github(url, token):
     return requests.get(url, headers={"Authorization": "token %s" % (token)})
 
 
+def get_repo(owner, repo, token):
+    response = github("https://api.github.com/repos/%s/%s" % (owner, repo), token)
+    if response.status_code != 200:
+        print("Unable to get latest repo")
+        return None
+
+    return response.json()
+
+
 def get_releases(owner, repo, token):
     return github("https://api.github.com/repos/%s/%s/releases" % (owner, repo), token)
 
@@ -79,10 +88,13 @@ with open(file, "w") as out:
     log("Parsing %d repositories...\n" % (len(repos)))
     for repo in repos:
         log("  %s" % (repo))
+        repo_info = get_repo(owner, repo, token)
+
         latest_release_date = get_latest_release_date(owner, repo, token)
         if latest_release_date and latest_release_date >= max_releaseage:
             log(" - found releases\n")
-            out.write("# %s\n" % (repo))
+            out.write("# [%s](%s)\n" % (repo, repo_info["html_url"]))
+            out.write("%s\n\n" % (repo_info["description"]))
             response = get_releases(owner, repo, token)
 
             if response.status_code != 200:
